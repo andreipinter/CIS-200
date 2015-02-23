@@ -1,0 +1,56 @@
+/*
+@author Andrei Pinter
+@file lab2c
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int wind; //declared the value 
+	cout << "Enter in a desired windspeed:";
+		cin >>wind; //program reads the user inputed value 
+		if (wind >= 65 && wind <= 85) //deteremines if the value based on logical statement inolving ranges 
+			cout << "Category 0 hurricane"<<endl;
+		else if (wind >= 86 && wind <= 110)
+			cout << "Category 1 hurricane" << endl;
+		else if (wind >= 111 && wind <= 135)
+			cout << "Category 2 hurricane" << endl;
+		else if (wind >= 136 && wind <= 165)
+			cout << "Category 3 hurricane " << endl;
+		else if (wind >= 166 && wind <= 200)
+			cout << "Category 4 hurricane" << endl;
+		else if (wind >= 200)
+			cout << "Category 5 hurricane" << endl;
+		else
+			cout << "Storm does not classify as Hurrican "<<endl; //if all other statements are invalid, this statement will end program
+}
+/*test operations:
+Enter in a desired windspeed:70
+Category 0 hurricane
+Press any key to continue . . .
+
+Enter in a desired windspeed:90
+Category 1 hurricane
+Press any key to continue . . .
+
+Enter in a desired windspeed:150
+Category 3 hurricane
+Press any key to continue . . .
+
+Enter in a desired windspeed:170
+Category 4 hurricane
+Press any key to continue . . .
+
+Enter in a desired windspeed:300
+Category 5 hurricane
+Press any key to continue . . .
+
+Enter in a desired windspeed:10
+Storm does not classify as Hurrican
+Press any key to continue . . .
+
+*/
+
+
