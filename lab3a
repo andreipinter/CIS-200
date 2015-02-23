@@ -1,0 +1,59 @@
+
+/**
+* @author Andrei Pinter
+* @file integerAverage.cpp
+* Calculate the average of several integers. */
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int value; // current value
+	int count = 0; // number of inputs
+	int total; // sum of inputs
+
+	// prompt for input
+	cout << "Enter integers (9999 to end):" << endl;
+	cin >> value;
+	total = 0;
+	while (value < 9999)
+	{
+		total +=value;
+		count++;
+		cin >> value; // read in next value
+	} // end while
+
+	// if user entered at least one value
+	if (count != 0)
+		cout << "\nThe average is: "
+		<< double (total)/  count << endl;
+	else
+		cout << "\nNo values were entered." << endl;
+
+	return 0; // indicate program ended successfully
+} // end main
+
+/*
+Enter integers (9999 to end):
+34 67 43 21
+9999
+
+The average is: 41.25
+Press any key to continue . . .
+
+Enter integers (9999 to end):
+453 23 5 23
+9999
+
+The average is: 126
+Press any key to continue . . .
+
+
+Enter integers (9999 to end):
+453 23 5 23
+9999
+
+The average is: 126
+Press any key to continue . . .
+*/
