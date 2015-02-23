@@ -1,0 +1,52 @@
+// triangles.cpp
+//@author Andrei Pinter 
+#include <iostream> // allows program to perform input and output
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	double a,b,c; // sides  read from user
+    double perimeter, s, area;
+
+	cout << "Enter three sides of the triangle "; // prompt
+	cin >> a>>b>>c; // read sides from user
+
+	perimeter=a+b+c;
+    s=.5*(a+b+c);
+    area=sqrt(s*(s-a)*(s-b)*(s-c));
+
+    if (a*a+b*b==c*c)
+        cout <<"this is a right triangle"<< endl;
+	else
+        cout <<"this is not a right triangle "<<endl;
+    cout <<"side A: "<<a<<endl; 
+    cout <<"side B: "<<b<<endl;
+    cout <<"side C: "<<c<<endl;
+    cout <<"The area = "<<area<<endl;
+    cout <<"The perimeter = "<<perimeter<<endl;
+
+	return 0; // indicate successful termination
+} // end main
+
+/*
+Enter three sides of the triangle 6.0 8.0 10.0
+this is a right triangle
+side A: 6
+side B: 8
+side C: 10
+The area = 24
+The perimeter = 24
+Press any key to continue . . .
+
+Enter three sides of the triangle 5.0 6.0 7.0
+this is not a right triangle
+side A: 5
+side B: 6
+side C: 7
+The area = 14.6969
+The perimeter = 18
+Press any key to continue . . .
+
+*/
+
